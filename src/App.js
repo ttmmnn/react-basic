@@ -1,26 +1,28 @@
-import logo from './logo.svg';
+import Article from './components/Article';
 import './App.css';
 
 function App() {
+  const authorName = 'Torahack';
+  const now = new Date();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>新・日本一わかりやすいReact入門シリーズで環境構築しました。</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Article
+        title={'新・日本一わかりやすいReact入門1'}
+        content={'今日のトピックはpropsのデータの受け渡しについて。'}
+        order={3}
+        isPublished={true}
+        authorName={authorName}
+        updatedAt={now}
+      />
+      <Article
+        title={'新・日本一わかりやすいReact入門2'}
+        content={'今日のトピックはuseStateについて。'}
+      />
+      <Article
+        title={'新・日本一わかりやすいReact入門3'}
+        content={'今日のトピックはuseEffectについて。'}
+      />
     </div>
   );
 }
-
 export default App;
