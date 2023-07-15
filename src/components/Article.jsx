@@ -1,10 +1,8 @@
-// default import（名前付きimport）
-import { Content, Title } from './index';
 const Article = (props) => {
   return (
     <div>
-      <Title title={props.title} />
-      <Content content={props.content} />
+      <h2>{props.title}</h2>
+      <p>{props.content}</p>
     </div>
   );
 };
